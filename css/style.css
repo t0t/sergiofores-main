@@ -13,6 +13,10 @@
       line-height: 1.6;
     }
 
+    h3 {
+      margin-bottom: var(--space-sm);
+    }
+
     header {
       padding: var(--space-sm);
       position: fixed;
@@ -67,7 +71,6 @@
     }
 
     section {
-      min-height: 100vh;
       padding: 2rem;
     }
     section:nth-of-type(odd) {
@@ -84,6 +87,12 @@
       /* transform: translateY(-50%); */
       max-width: 50vh;
       z-index: 1;
+    }
+    .avatar {
+      /* transform: translateY(-50%); */
+      max-width: 100px;
+      z-index: 1;
+      border-radius: 50%;
     }
 
     .hero {
@@ -198,11 +207,6 @@
       font-size: var(--text-base);
     }
 
-    .skill:hover {
-      transform: translateY(-3px);
-      transition: transform 0.2s ease;
-    }
-
     #projects {
       padding: var(--space-md);
     }
@@ -234,7 +238,6 @@
 
     .project h3 {
       font-size: var(--text-lg);
-      margin-bottom: var(--space-sm);
     }
 
     .project p {
@@ -252,32 +255,57 @@
       font-size: var(--text-base);
     }
 
-    #contact {
-      display: grid;
-      grid-template-rows: repeat(2, 1fr);
-      gap: var(--grid-gap);
-      padding: var(--space-md);
-      margin: 0 auto;
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-lg);
       text-align: center;
-      align-content: space-evenly;
     }
 
-    #whatsapp-button {
-      background-color: #25d366;
+    .contact h2 {
+      margin-bottom: var(--space-md);
+    }
+
+    .contact .avatar {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: var(--space-md);
+    }
+
+    .contact #whatsapp-button {
+      background-color: #25D366;
       color: white;
-      align-self: self-start;
-      padding: 0.75rem 1.5rem;
       border: none;
-      border-radius: 4px;
+      padding: var(--space-sm) var(--space-md);
+      border-radius: 5px;
       font-size: var(--text-base);
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      margin: 0 auto;
+      transition: background-color 0.2s ease;
+      margin-bottom: var(--space-md);
     }
 
-    #whatsapp-button i {
-      margin-right: var(--space-sm);
+    .contact #whatsapp-button:hover {
+      background-color: #128C7E;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: var(--space-md);
+    }
+
+    .social-links a {
+      margin: 0 var(--space-sm);
+      font-size: var(--text-lg);
+      color: var(--color-text);
+      transition: color 0.2s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--color-primary);
     }
 
     footer {
