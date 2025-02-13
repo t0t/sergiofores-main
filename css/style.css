@@ -14,18 +14,19 @@
     }
 
     header {
-      background-color: white;
       padding: var(--space-sm);
       position: fixed;
       width: 100%;
       top: 0;
       left: 0;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
       transform: translateY(0);
     }
     
+    header.scrolled {
+        background-color: var(--color-bg-primary);
+    }
     header.hidden {
         transform: translateY(-100%);
     }
@@ -54,6 +55,14 @@
       font-size: var(--text-base);
     }
 
+    header .menu-toggle {
+      display: none;
+    }
+
+    header nav {
+      display: flex;
+    }
+
     section {
       min-height: 100vh;
       padding: 2rem;
@@ -65,6 +74,15 @@
       background-color: var(--color-bg);
     }
 
+    .portrait {
+      position: absolute;
+      bottom: 0;
+      left: 20%;
+      /* transform: translateY(-50%); */
+      max-width: 50vh;
+      z-index: 1;
+    }
+
     .hero {
       height: 100vh;
       display: flex;
@@ -74,17 +92,8 @@
       overflow: hidden;
     }
 
-    .portrait {
-      position: absolute;
-      top: 50%;
-      left: 20%;
-      transform: translateY(-50%);
-      max-width: 50vh;
-      z-index: 1;
-    }
-
     .hero-content {
-      text-align: center;
+      text-align: right;
       position: relative;
       z-index: 2;
     }
@@ -137,10 +146,14 @@
     }
 
     #about {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: var(--grid-gap);
       padding: var(--space-md);
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
       text-align: center;
+      align-content: space-evenly;
     }
 
     #skills {
@@ -237,13 +250,19 @@
     }
 
     #contact {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      gap: var(--grid-gap);
       padding: var(--space-md);
+      margin: 0 auto;
       text-align: center;
+      align-content: space-evenly;
     }
 
     #whatsapp-button {
       background-color: #25d366;
       color: white;
+      align-self: self-start;
       padding: 0.75rem 1.5rem;
       border: none;
       border-radius: 4px;
@@ -251,7 +270,6 @@
       cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
       margin: 0 auto;
     }
 
@@ -278,9 +296,9 @@
     }
 
     @media (max-width: 768px) {
-      .header-content {
+      /* .header-content {
         flex-direction: column;
-      }
+      } */
 
       header h1 {
         margin-right: 0;
@@ -311,6 +329,35 @@
 
       .skills-grid {
         grid-template-columns: 1fr;
+      }
+
+      header .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--color-text);
+      }
+      
+      /* Ocultamos el menú por defecto */
+      header nav {
+        display: none;
+        flex-direction: column; /* Si deseas colocar los enlaces en columna */
+        background-color: var(--color-bg);
+        padding: 1rem;
+        z-index: 10; /* Asegura que el menú esté por encima de otros elementos */
+      }
+      
+      /* Cuando el menú está activo */
+      header nav.active {
+        display: block;
+        position: fixed; /* o absolute, según el diseño */
+        top: 60px; /* Ajusta según sea necesario */
+        right: 0; /* Ajusta según sea necesario */
+        width: 50vw; /* Ocupa todo el ancho */
+        /* height: 100vh; Ocupa toda la altura */
+        overflow-y: auto; /* Permite el scroll si el contenido es muy largo */
       }
     }
 

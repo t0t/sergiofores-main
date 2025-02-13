@@ -1,171 +1,172 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Personal landing page of Sergio Forés, a multidisciplinary professional with over 20 years of experience in arts, design, and web development.">
-      <meta name="keywords" content="Sergio Forés, art, design, web development, portfolio, multidisciplinary, professional">
-      <title>Sergio Forés | Multidisciplinary Professional</title>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="./css/variables.css">
-      <link rel="stylesheet" href="./css/style.css">
-    </head>
-    <body>
-      <header>
-        <div class="header-content">
-          <h1>Sergio Forés</h1>
-          <svg width="50" height="50" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="white" />
-          </svg>
-          <nav>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
-          </nav>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="description" content="Personal landing page of Sergio Forés, a multidisciplinary professional with over 20 years of experience in arts, design, and web development.">
+  <meta name="keywords" content="Sergio Forés, art, design, web development, portfolio, multidisciplinary, professional">
+  <title>Sergio Forés | Multidisciplinary Professional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <svg width="50" height="50" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="white" />
+      </svg>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div id="three-container"></div>
+    <!-- URL de Unsplash específica y borde rojo para depurar -->
+    <img src="images/retrato-sergio.png" alt="Sergio Forés Portrait" class="portrait">
+    <div class="hero-content">
+      <h1>Fusionando Arte, Diseño y Tecnología</h1>
+      <h2>Sergio Forés</h2>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <i class="fas fa-paint-brush"></i>
+      <h3>Art</h3>
+      <p>Traditional and digital art.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-drafting-compass"></i>
+      <h3>Design</h3>
+      <p>Graphic and UX/UI design.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-code"></i>
+      <h3>Technology</h3>
+      <p>Web development and more.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about-content">
+      <p>¡Hola! Soy Sergio Forés, un profesional multidisciplinario con más de 20 años de experiencia en el mundo del arte, el diseño y el desarrollo web. Mi enfoque se basa en la fusión de estas tres disciplinas para crear soluciones innovadoras y creativas. A lo largo de mi carrera, he trabajado en una amplia variedad de proyectos, desde instalaciones artísticas interactivas hasta el diseño y desarrollo de interfaces web intuitivas y atractivas.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Technical Skills</h3>
+        <div class="skill">
+          <i class="fas fa-laptop-code"></i>
+          <span>Programming Logic</span>
         </div>
-      </header>
-
-      <section class="hero">
-        <div id="three-container"></div>
-        <!-- URL de Unsplash específica y borde rojo para depurar -->
-        <img src="images/retrato-sergio.png" alt="Sergio Forés Portrait" class="portrait">
-        <div class="hero-content">
-          <h1>Fusionando Arte, Diseño y Tecnología</h1>
+        <div class="skill">
+          <i class="fas fa-pencil-ruler"></i>
+          <span>Design Tools</span>
         </div>
-        <img src="./images/bg-image.jpg" alt="Background Image" class="bg-image">
-      </section>
-
-      <section class="features">
-        <div class="feature-card">
-          <i class="fas fa-paint-brush"></i>
-          <h3>Art</h3>
-          <p>Traditional and digital art.</p>
+        <div class="skill">
+          <i class="fas fa-code-branch"></i>
+          <span>Version Control</span>
         </div>
-        <div class="feature-card">
-          <i class="fas fa-drafting-compass"></i>
-          <h3>Design</h3>
-          <p>Graphic and UX/UI design.</p>
+        <div class="skill">
+          <i class="fab fa-sass"></i>
+          <span>CSS Preprocessing</span>
         </div>
-        <div class="feature-card">
-          <i class="fas fa-code"></i>
-          <h3>Technology</h3>
-          <p>Web development and more.</p>
+        <div class="skill">
+          <i class="fas fa-robot"></i>
+          <span>AI Assistants/Agents</span>
         </div>
-      </section>
-
-      <section id="about">
-        <h2>About</h2>
-        <div class="about-content">
-          <p>¡Hola! Soy Sergio Forés, un profesional multidisciplinario con más de 20 años de experiencia en el mundo del arte, el diseño y el desarrollo web. Mi enfoque se basa en la fusión de estas tres disciplinas para crear soluciones innovadoras y creativas. A lo largo de mi carrera, he trabajado en una amplia variedad de proyectos, desde instalaciones artísticas interactivas hasta el diseño y desarrollo de interfaces web intuitivas y atractivas.</p>
+      </div>
+      <div class="skill-category">
+        <h3>Soft Skills</h3>
+        <div class="skill">
+          <i class="fas fa-lightbulb"></i>
+          <span>Creativity and Innovation</span>
         </div>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Technical Skills</h3>
-            <div class="skill">
-              <i class="fas fa-laptop-code"></i>
-              <span>Programming Logic</span>
-            </div>
-            <div class="skill">
-              <i class="fas fa-pencil-ruler"></i>
-              <span>Design Tools</span>
-            </div>
-            <div class="skill">
-              <i class="fas fa-code-branch"></i>
-              <span>Version Control</span>
-            </div>
-            <div class="skill">
-              <i class="fab fa-sass"></i>
-              <span>CSS Preprocessing</span>
-            </div>
-            <div class="skill">
-              <i class="fas fa-robot"></i>
-              <span>AI Assistants/Agents</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Soft Skills</h3>
-            <div class="skill">
-              <i class="fas fa-lightbulb"></i>
-              <span>Creativity and Innovation</span>
-            </div>
-            <div class="skill">
-              <i class="fas fa-comments"></i>
-              <span>Communication and Collaboration</span>
-            </div>
-            <div class="skill">
-              <i class="fas fa-sync-alt"></i>
-              <span>Adaptability and Flexibility</span>
-            </div>
-            <div class="skill">
-              <i class="fas fa-puzzle-piece"></i>
-              <span>Problem Solving</span>
-            </div>
-            <div class="skill">
-              <i class="fas fa-clock"></i>
-              <span>Time Management and Organization</span>
-            </div>
-            <div class="skill">
-              <i class="fas fa-graduation-cap"></i>
-              <span>Continuous Learning</span>
-            </div>
-          </div>
+        <div class="skill">
+          <i class="fas fa-comments"></i>
+          <span>Communication and Collaboration</span>
         </div>
-      </section>
-
-      <section id="projects">
-        <h2>Cosas que hago en distintos ámbitos</h2>
-        <div class="projects-grid">
-          <div class="project">
-            <img src="./images/project1.svg" alt="Project 1">
-            <h3>01234 (04)</h3>
-            <p>01234 (04): es un mapa estructural de un proyecto en el que intervienen varias disciplinas, desde la instalación, la performance, el video arte, la documentación, etc. El proyecto se ramifica y crece como un organismo vivo.</p>
-            <a href="#" class="project-link">View Project</a>
-          </div>
-          <div class="project">
-            <img src="./images/project2.svg" alt="Project 2">
-            <h3>Sandbox Frontend</h3>
-            <p>Sandbox de experimentación frontend.</p>
-            <a href="https://t0t.github.io/huerto_01234/" class="project-link">View Project</a>
-          </div>
-          <div class="project">
-            <img src="./images/project3.svg" alt="Project 3">
-            <h3>Art Portfolio</h3>
-            <p>Portafolio de Obra plástica.</p>
-            <a href="https://t0t.github.io/sergiofores_art/" class="project-link">View Project</a>
-          </div>
+        <div class="skill">
+          <i class="fas fa-sync-alt"></i>
+          <span>Adaptability and Flexibility</span>
         </div>
-      </section>
+        <div class="skill">
+          <i class="fas fa-puzzle-piece"></i>
+          <span>Problem Solving</span>
+        </div>
+        <div class="skill">
+          <i class="fas fa-clock"></i>
+          <span>Time Management and Organization</span>
+        </div>
+        <div class="skill">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Continuous Learning</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <button id="whatsapp-button">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </button>
-        <p id="phone-number" style="display: none;"></p> 
-      </section>
+  <section id="projects">
+    <h2>Cosas que hago en distintos ámbitos</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <img src="./images/project1.svg" alt="Project 1">
+        <h3>01234 (04)</h3>
+        <p>01234 (04): es un mapa estructural de un proyecto en el que intervienen varias disciplinas, desde la instalación, la performance, el video arte, la documentación, etc. El proyecto se ramifica y crece como un organismo vivo.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+      <div class="project">
+        <img src="./images/project2.svg" alt="Project 2">
+        <h3>Sandbox Frontend</h3>
+        <p>Sandbox de experimentación frontend.</p>
+        <a href="https://t0t.github.io/huerto_01234/" class="project-link">View Project</a>
+      </div>
+      <div class="project">
+        <img src="./images/project3.svg" alt="Project 3">
+        <h3>Art Portfolio</h3>
+        <p>Portafolio de Obra plástica.</p>
+        <a href="https://t0t.github.io/sergiofores_art/" class="project-link">View Project</a>
+      </div>
+    </div>
+  </section>
 
-      <div id="three-container"></div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <button id="whatsapp-button">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </button>
+    <p id="phone-number" style="display: none;"></p> 
+  </section>
 
-      <footer>
-        <a href="https://www.instagram.com/cuenta.01234/" class="social-link">Instagram</a>
-        <a href="https://x.com/t0tinspire" class="social-link">X (Twitter)</a>
-        <a href="https://www.youtube.com/@0-1234" class="social-link">YouTube</a>
-        <a href="https://github.com/t0t" class="social-link">GitHub</a>
-      </footer>
+  <div id="three-container"></div>
 
-      <script type="module" src="./js/script.js"></script>
+  <footer>
+    <a href="https://www.instagram.com/cuenta.01234/" class="social-link">Instagram</a>
+    <a href="https://x.com/t0tinspire" class="social-link">X (Twitter)</a>
+    <a href="https://www.youtube.com/@0-1234" class="social-link">YouTube</a>
+    <a href="https://github.com/t0t" class="social-link">GitHub</a>
+  </footer>
 
-      <script>
-        // JavaScript para registrar errores de carga de la imagen
-        document.querySelector('.portrait').addEventListener('error', function() {
-          console.error('Error loading portrait image:', this.src);
-        });
-      </script>
-    </body>
-    </html>
+  <script type="module" src="./js/script.js"></script>
+
+  <script>
+    // JavaScript para registrar errores de carga de la imagen
+    document.querySelector('.portrait').addEventListener('error', function() {
+      console.error('Error loading portrait image:', this.src);
+    });
+  </script>
+</body>
+</html>

@@ -1,14 +1,29 @@
-let prevScrollPos = window.scrollY;
+let lastScrollY = window.scrollY;
 
-window.onscroll = function() {
-  let currentScrollPos = window.scrollY;
-  if (prevScrollPos > currentScrollPos) {
-    document.querySelector("header").classList.remove("hidden");
-  } else {
-    document.querySelector("header").classList.add("hidden");
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('header');
+  if (header) {
+    const currentScrollY = window.scrollY;
+    
+    // Manejo de la clase 'scrolled'
+    if (currentScrollY > 100) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+
+    // Manejo de la clase 'hidden' según la dirección del scroll
+    if (currentScrollY > lastScrollY) {
+      // Se desplaza hacia abajo
+      header.classList.add('hidden');
+    } else {
+      // Se desplaza hacia arriba
+      header.classList.remove('hidden');
+    }
+
+    lastScrollY = currentScrollY;
   }
-  prevScrollPos = currentScrollPos;
-}
+});
 
 document.getElementById('whatsapp-button').addEventListener('click', function() {
   (async function() {
@@ -32,3 +47,20 @@ document.querySelectorAll('.nav-link').forEach(link => {
     targetElement.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+const menuToggle = document.querySelector('.menu-toggle');
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', function() {
+    console.log('Menu toggle clicked');
+    const nav = document.querySelector('header nav');
+    if (nav) {
+      nav.classList.toggle('active');
+      console.log('Navigation active:', nav.classList.contains('active'));
+    } else {
+      console.error('Navigation not found');
+    }
+  });
+} else {
+  console.error('Menu toggle button not found');
+}
