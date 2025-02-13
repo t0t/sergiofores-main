@@ -16,9 +16,12 @@
     header {
       padding: var(--space-sm);
       position: fixed;
-      width: 100%;
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
       top: 0;
       left: 0;
+      right: 0;
       z-index: 1000;
       transition: transform 0.3s ease;
       transform: translateY(0);
@@ -218,7 +221,7 @@
     }
 
     .project {
-      background-color: var(--color-bg-secondary);
+      /* background-color: var(--color-bg-secondary); */
       padding: var(--space-md);
       border-radius: 8px;
     }
@@ -295,6 +298,57 @@
       color: var(--color-accent);
     }
 
+    @media (max-width: 1000px) {
+      header .menu-toggle {
+        display: block;
+        position: relative;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: var(--color-text);
+        transition: transform 0.3s ease;
+        font-size: 2rem;
+      }
+
+      header .menu-toggle svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      header .menu-toggle.active {
+        transform: rotate(90deg);
+      }
+      
+      header .menu-toggle::before {
+        content: "☰";
+        font-size: 3rem;
+      }
+
+      header .menu-toggle.active::before {
+        content: "X";
+      }
+
+      /* Ocultamos el menú por defecto */
+      header nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-bg);
+        width: 50vw;
+        padding: 1rem;
+        z-index: 10;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        overflow-y: auto;
+      }
+      
+      /* Cuando el menú está activo */
+      header nav.active {
+        display: block;
+      }
+    }
+
     @media (max-width: 768px) {
       /* .header-content {
         flex-direction: column;
@@ -329,35 +383,6 @@
 
       .skills-grid {
         grid-template-columns: 1fr;
-      }
-
-      header .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-        color: var(--color-text);
-      }
-      
-      /* Ocultamos el menú por defecto */
-      header nav {
-        display: none;
-        flex-direction: column; /* Si deseas colocar los enlaces en columna */
-        background-color: var(--color-bg);
-        padding: 1rem;
-        z-index: 10; /* Asegura que el menú esté por encima de otros elementos */
-      }
-      
-      /* Cuando el menú está activo */
-      header nav.active {
-        display: block;
-        position: fixed; /* o absolute, según el diseño */
-        top: 60px; /* Ajusta según sea necesario */
-        right: 0; /* Ajusta según sea necesario */
-        width: 50vw; /* Ocupa todo el ancho */
-        /* height: 100vh; Ocupa toda la altura */
-        overflow-y: auto; /* Permite el scroll si el contenido es muy largo */
       }
     }
 

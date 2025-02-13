@@ -9,5 +9,5 @@ export default defineConfig({
         main: './index.html'
       }
     }
-  }
+  },
 })

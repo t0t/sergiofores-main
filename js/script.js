@@ -56,6 +56,7 @@ if (menuToggle) {
     const nav = document.querySelector('header nav');
     if (nav) {
       nav.classList.toggle('active');
+      menuToggle.classList.toggle('active');
       console.log('Navigation active:', nav.classList.contains('active'));
     } else {
       console.error('Navigation not found');
