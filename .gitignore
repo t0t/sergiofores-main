@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+
+# OS generated files
+.DS_Store
+
+# Vite build output
+.vite/
+dist/
+
+# Environment files
+.env
+
+# Optional npm cache directory
+.npm
+
+# Editor directories and files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
